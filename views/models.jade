@@ -1,0 +1,11 @@
+extends _shared
+
+block body
+    .models
+        h2 Models we work on
+        a(href="models?sort=asc") asc | 
+        a(href="models?sort=desc") desc | 
+        a(href="models") none
+
+        for model in models
+            h4= model

@@ -1,0 +1,16 @@
+extends _shared
+
+block body
+	.services
+		h2 Services we provide
+
+		div(class="btn-group" role="group")
+			a(href="?filter=repair" role="button" class={"btn": true, "btn-default": true, active: filter == 'repair'}) repair
+			a(href="?filter=maintenance" role="button" class={"btn": true, "btn-default": true, active: filter == 'maintenance'}) maintenance
+			a(href="?filter=cosmetic" role="button" class={"btn": true, "btn-default": true, active: filter == 'cosmetic'}) cosmetic
+			
+		for service in services
+			h4= service.job
+			p= service.cost
+			p= service.type
+

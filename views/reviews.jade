@@ -1,0 +1,13 @@
+extends _shared
+
+block body
+	.reviews
+		h2 Customer reviews
+
+		form(class="form" method="get")
+			input(type="text" name="search" class="form-control" placeholder="Search" style="max-width: 250px")
+
+		for review in reviews
+			blockquote
+				p= review.content
+				footer= review.source
